@@ -4,36 +4,76 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-	//offset from the viewport center to fix damping
-	public float m_DampTime = 10f;
-	public Transform m_Target;
-	public float m_XOffset = 0;
-	public float m_YOffset = 0;
+	/*public GameObject followObject;
+	public Vector2 followOffset;
+	public float speed = 3f;
+	private Vector2 threshold;
+	private Rigidbody2D rb;
 
-	private float margin = 0.1f;
-
+	// Start is called before the first frame update
 	void Start()
 	{
-		if (m_Target == null)
-		{
-			m_Target = GameObject.FindGameObjectWithTag("Player").transform;
-		}
+		threshold = calculateThreshold();
+		rb = followObject.GetComponent<Rigidbody2D>();
 	}
 
+	// Update is called once per frame
+	void FixedUpdate()
+	{
+		Vector2 follow = followObject.transform.position;
+		float xDifference = Vector2.Distance(Vector2.right * transform.position.x, Vector2.right * follow.x);
+		float yDifference = Vector2.Distance(Vector2.up * transform.position.y, Vector2.up * follow.y);
+
+		Vector3 newPosition = transform.position;
+		if (Mathf.Abs(xDifference) >= threshold.x)
+		{
+			newPosition.x = follow.x;
+		}
+		if (Mathf.Abs(yDifference) >= threshold.y)
+		{
+			newPosition.y = follow.y;
+		}
+		float moveSpeed = rb.velocity.magnitude > speed ? rb.velocity.magnitude : speed;
+		transform.position = Vector3.MoveTowards(transform.position, newPosition, moveSpeed * Time.deltaTime);
+	}
+	private Vector3 calculateThreshold()
+	{
+		Rect aspect = Camera.main.pixelRect;
+		Vector2 t = new Vector2(Camera.main.orthographicSize * aspect.width / aspect.height, Camera.main.orthographicSize);
+		t.x -= followOffset.x;
+		t.y -= followOffset.y;
+		return t;
+	}
+	private void OnDrawGizmos()
+	{
+		Gizmos.color = Color.blue;
+		Vector2 border = calculateThreshold();
+		Gizmos.DrawWireCube(transform.position, new Vector3(border.x * 2, border.y * 2, 1));
+	}*/
+
+	public GameObject player;
+	public float offset;
+	private Vector3 playerPosition;
+	public float offsetSmoothing;
+	// Use this for initialization
+	void Start()
+	{
+
+	}
+
+	// Update is called once per frame
 	void Update()
 	{
-		if (m_Target)
+		playerPosition = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
+		if (player.transform.localScale.x > 0f)
 		{
-			float targetX = m_Target.position.x + m_XOffset;
-			float targetY = m_Target.position.y + m_YOffset;
-
-			if (Mathf.Abs(transform.position.x - targetX) > margin)
-				targetX = Mathf.Lerp(transform.position.x, targetX, 1 / m_DampTime * Time.deltaTime);
-
-			if (Mathf.Abs(transform.position.y - targetY) > margin)
-				targetY = Mathf.Lerp(transform.position.y, targetY, m_DampTime * Time.deltaTime);
-
-			transform.position = new Vector3(targetX, targetY, transform.position.z);
+			playerPosition = new Vector3(playerPosition.x + offset, playerPosition.y, playerPosition.z);
 		}
+		else
+		{
+			playerPosition = new Vector3(playerPosition.x - offset, playerPosition.y, playerPosition.z);
+		}
+		transform.position = Vector3.Lerp(transform.position, playerPosition, offsetSmoothing * Time.deltaTime);
 	}
+
 }
