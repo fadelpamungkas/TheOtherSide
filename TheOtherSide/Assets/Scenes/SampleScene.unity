@@ -1337,29 +1337,6 @@ Transform:
   m_Father: {fileID: 576936519}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &783141756 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000012064709220, guid: 91210ac9267d1654cbf08710c5d60e28,
-    type: 3}
-  m_PrefabInstance: {fileID: 1407363634}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &783141757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783141756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc283a5ee0ed24548b5d5a4772958d2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  resetInvantoryOnStart: 1
-  invantoryRoot: {fileID: 1407363635}
-  maxInvantorySlots: 8
-  useTooltip: 0
-  tooltipText: {fileID: 0}
 --- !u!1 &935951513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,6 +1948,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: InvantoryBar
       objectReference: {fileID: 0}
+    - target: {fileID: 224000010099008100, guid: 91210ac9267d1654cbf08710c5d60e28,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 318
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000010099008100, guid: 91210ac9267d1654cbf08710c5d60e28,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224000012309987324, guid: 91210ac9267d1654cbf08710c5d60e28,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2076,6 +2063,36 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224000012401461876, guid: 91210ac9267d1654cbf08710c5d60e28,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000011444
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012401461876, guid: 91210ac9267d1654cbf08710c5d60e28,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000011444
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012401461876, guid: 91210ac9267d1654cbf08710c5d60e28,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 16.93502
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012401461876, guid: 91210ac9267d1654cbf08710c5d60e28,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 16.93502
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013625405900, guid: 91210ac9267d1654cbf08710c5d60e28,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 329.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013625405900, guid: 91210ac9267d1654cbf08710c5d60e28,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91210ac9267d1654cbf08710c5d60e28, type: 3}
 --- !u!1 &1407363635 stripped
@@ -2084,6 +2101,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1407363634}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1407363636 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114000013506336640, guid: 91210ac9267d1654cbf08710c5d60e28,
+    type: 3}
+  m_PrefabInstance: {fileID: 1407363634}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1609432414
 GameObject:
   m_ObjectHideFlags: 0
@@ -2253,6 +2282,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3192792926438671349, guid: a8336c4f5eaac954b80e70e9a9192eda,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3790974942691011076, guid: a8336c4f5eaac954b80e70e9a9192eda,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2323,10 +2357,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.100640714
       objectReference: {fileID: 0}
+    - target: {fileID: 7955746444700266264, guid: a8336c4f5eaac954b80e70e9a9192eda,
+        type: 3}
+      propertyPath: objectRefrence
+      value: 
+      objectReference: {fileID: 11400000, guid: f5c3c2584e58f4c4f918551749c60673,
+        type: 2}
     - target: {fileID: 9016831201177438807, guid: a8336c4f5eaac954b80e70e9a9192eda,
         type: 3}
       propertyPath: m_Name
       value: kunti
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016831201177438807, guid: a8336c4f5eaac954b80e70e9a9192eda,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8336c4f5eaac954b80e70e9a9192eda, type: 3}
@@ -2794,10 +2839,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetInvantoryOnStart: 1
-  invantoryRoot: {fileID: 783141756}
+  invantoryRoot: {fileID: 1407363635}
   maxInvantorySlots: 8
-  useTooltip: 0
-  tooltipText: {fileID: 0}
+  useTooltip: 1
+  tooltipText: {fileID: 1407363636}
 --- !u!1 &2044378639
 GameObject:
   m_ObjectHideFlags: 0
