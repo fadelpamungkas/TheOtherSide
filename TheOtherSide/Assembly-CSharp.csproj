@@ -67,6 +67,10 @@
      <Compile Include="Assets\InvantorySystem\Scripts\RuntimeInvantoryLogic.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\CameraSystem.cs" />
+     <Compile Include="Assets\Scripts\EnemyDetector.cs" />
+     <Compile Include="Assets\Scripts\EnemyFollow.cs" />
+     <Compile Include="Assets\Scripts\EnemyPatrol.cs" />
+     <Compile Include="Assets\Scripts\EnemyScript.cs" />
      <Compile Include="Assets\Scripts\FallDetector.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\TriggerKunti.cs" />
