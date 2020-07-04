@@ -67,6 +67,9 @@
      <Compile Include="Assets\InvantorySystem\Scripts\RuntimeInvantoryLogic.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\CameraSystem.cs" />
+     <Compile Include="Assets\Scripts\Dialogue.cs" />
+     <Compile Include="Assets\Scripts\DialogueManager.cs" />
+     <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
      <Compile Include="Assets\Scripts\EnemyDetector.cs" />
      <Compile Include="Assets\Scripts\EnemyFollow.cs" />
      <Compile Include="Assets\Scripts\EnemyPatrol.cs" />
