@@ -25,6 +25,6 @@ public class TriggerKunti : MonoBehaviour
         {
             spriteR.enabled = true;
             Destroy(gameObject, 3f);
-        }
+        }   
     }
 }
