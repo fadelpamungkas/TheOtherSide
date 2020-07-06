@@ -8,6 +8,7 @@ public class movement_BOY : MonoBehaviour
     Rigidbody2D lompat;
     bool balik;
     int pindah;
+    public int darah;
 
     public bool isGrounded = false;
     public bool tanah;
@@ -22,6 +23,7 @@ public class movement_BOY : MonoBehaviour
     {
         lompat = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        darah = 3;
     }
 
     // Update is called once per frame
