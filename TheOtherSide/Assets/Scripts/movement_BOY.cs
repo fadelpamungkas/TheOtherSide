@@ -79,5 +79,10 @@ public class movement_BOY : MonoBehaviour
         karakter.x *= -1;
         transform.localScale = karakter;
     }
+
+    public void DestroyBoy()
+    {
+        Destroy(gameObject);
+    }
     
 }

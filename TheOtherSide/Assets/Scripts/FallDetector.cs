@@ -6,11 +6,14 @@ using UnityEngine.SceneManagement;
 public class FallDetector : MonoBehaviour
 {
     public Transform spawn;
-    public movement_BOY boy;
+    Health boy;
+    // public GameObject gameOver;
+    GameOver selesai;
     // Start is called before the first frame update
     void Start()
     {
-        boy = GameObject.FindGameObjectWithTag("Player").GetComponent<movement_BOY>();
+        boy = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+        selesai = GameObject.Find("Game Over").GetComponent<GameOver>();
     }
 
     // Update is called once per frame
@@ -21,14 +24,14 @@ public class FallDetector : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.transform.tag == "Player" && boy.darah > 1)
+        if (other.transform.tag == "Player" && boy.health > 1)
         {
-            boy.darah--;
+            boy.health--;
             other.transform.position = spawn.position;
         } 
         else
         {
-            SceneManager.LoadScene("MainMenu");
+            selesai.GameOverMuncul();
         }
     }
 }

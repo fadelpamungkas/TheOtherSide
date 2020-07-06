@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyPatrol : MonoBehaviour
 {
@@ -11,11 +12,13 @@ public class EnemyPatrol : MonoBehaviour
 
     public Transform groundDetection;
 
-    movement_BOY boy;
+    Health boy;
+    GameOver selesai;
     
     private void Update()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
+        selesai = GameObject.Find("Game Over").GetComponent<GameOver>();
 
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
         if (groundInfo.collider == false)
@@ -35,11 +38,13 @@ public class EnemyPatrol : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.transform.tag == "Player"){
+        boy = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+
+        if(other.transform.tag == "Player" && boy.health > 1){
             Destroy(gameObject);
-            boy = GameObject.FindGameObjectWithTag("Player").GetComponent<movement_BOY>();
-            boy.darah--;
-            Debug.Log(boy.darah);
+            boy.health--;
+        } else{
+            selesai.GameOverMuncul();
         }
     }
 }
