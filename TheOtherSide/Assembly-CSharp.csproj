@@ -65,6 +65,8 @@
      <Compile Include="Assets\InvantorySystem\Scripts\InvantorySlot.cs" />
      <Compile Include="Assets\InvantorySystem\Scripts\Logic\Medkit.cs" />
      <Compile Include="Assets\InvantorySystem\Scripts\RuntimeInvantoryLogic.cs" />
+     <Compile Include="Assets\Scripts\BendaMistis.cs" />
+     <Compile Include="Assets\Scripts\BendaMistisTrigger.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\CameraSystem.cs" />
      <Compile Include="Assets\Scripts\Dialogue.cs" />
