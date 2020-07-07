@@ -21,5 +21,9 @@ public class Health : MonoBehaviour
                 hearts[i].enabled = false;
             }
         }
+
+        if(health == 0){
+            hearts[0].enabled = false;
+        }
     }
 }

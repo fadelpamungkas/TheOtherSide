@@ -31,6 +31,7 @@ public class FallDetector : MonoBehaviour
         } 
         else
         {
+            boy.hearts[0].enabled = false;
             selesai.GameOverMuncul();
         }
     }

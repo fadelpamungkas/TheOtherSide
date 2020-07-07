@@ -44,6 +44,7 @@ public class EnemyPatrol : MonoBehaviour
             Destroy(gameObject);
             boy.health--;
         } else{
+            boy.hearts[0].enabled = false;
             selesai.GameOverMuncul();
         }
     }
