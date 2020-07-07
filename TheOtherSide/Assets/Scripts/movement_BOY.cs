@@ -60,7 +60,8 @@ public class movement_BOY : MonoBehaviour
         {
             //lompat.AddForce(new Vector2(0, kekuatanLompat));
             //gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 5f), ForceMode2D.Impulse);
-            gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * kekuatanLompat);
+            // gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * kekuatanLompat);
+            lompat.velocity = new Vector2(lompat.velocity.x, kekuatanLompat);
         }
 
         if (pindah>0 && !balik)
