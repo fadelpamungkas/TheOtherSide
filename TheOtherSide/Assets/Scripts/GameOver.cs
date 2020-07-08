@@ -19,10 +19,10 @@ public class GameOver : MonoBehaviour
 
     void Update()
     {
-        if(boy.health < 1){
-            Time.timeScale = 0f;
-            GameOverMuncul();
-        }
+        // if(boy.health < 1){
+        //     Time.timeScale = 0f;
+        //     GameOverMuncul();
+        // }
     }
 
     public void BacToMainMenu(){

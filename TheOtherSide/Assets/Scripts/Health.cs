@@ -10,6 +10,11 @@ public class Health : MonoBehaviour
     public Sprite heart;
     bool awal =  true;
 
+    void Start()
+    {
+        // DontDestroyOnLoad(this.gameObject);
+    }
+
     // Update is called once per frame
     void Update()
     {

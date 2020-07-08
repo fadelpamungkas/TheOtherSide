@@ -8,7 +8,6 @@ public class movement_BOY : MonoBehaviour
     Rigidbody2D lompat;
     bool balik;
     int pindah;
-    public int darah;
 
     public bool isGrounded = false;
     public bool tanah;
@@ -21,9 +20,9 @@ public class movement_BOY : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         lompat = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        darah = 3;
     }
 
     // Update is called once per frame
