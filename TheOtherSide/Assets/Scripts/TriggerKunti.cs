@@ -23,6 +23,7 @@ public class TriggerKunti : MonoBehaviour
     {
         if(other.transform.tag == "Player")
         {
+            AudioManager.PlaySound("jumpScare");
             spriteR.enabled = true;
             Destroy(gameObject, 3f);
         }   
